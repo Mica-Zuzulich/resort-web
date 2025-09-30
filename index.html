@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resort Orlando</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- 🔹 HEADER -->
+  <header>
+    <div class="logo">Resort Orlando</div>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#amenidades">Amenidades</a></li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 🔹 HERO -->
+  <section id="inicio" class="hero">
+    <h1>Bienvenido a Resort Orlando</h1>
+    <p>Un lugar único para disfrutar tus vacaciones</p>
+    <a href="#contacto" class="btn">Reservar ahora</a>
+  </section>
+
+  <!-- 🔹 AMENIDADES -->
+  <section id="amenidades" class="section">
+    <h2>Amenidades</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="img/piscina.jpg" alt="Piscina">
+        <h3>Piscina</h3>
+        <p>Relájate en nuestra piscina con vista al lago.</p>
+      </div>
+      <div class="card">
+        <img src="img/gym.jpg" alt="Gimnasio">
+        <h3>Gimnasio</h3>
+        <p>Equipamiento moderno para tu rutina diaria.</p>
+      </div>
+      <div class="card">
+        <img src="img/spa.jpg" alt="Spa">
+        <h3>Spa</h3>
+        <p>Un espacio pensado para tu bienestar.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🔹 GALERÍA -->
+  <section id="galeria" class="section">
+    <h2>Galería</h2>
+    <div class="galeria">
+      <img src="img/1.jpg" alt="foto 1">
+      <img src="img/2.jpg" alt="foto 2">
+      <img src="img/3.jpg" alt="foto 3">
+      <img src="img/4.jpg" alt="foto 4">
+    </div>
+  </section>
+
+  <!-- 🔹 CONTACTO -->
+  <section id="contacto" class="section contacto">
+    <h2>Contacto</h2>
+    <form action="https://formspree.io/f/tu-codigo" method="POST">
+      <input type="text" name="nombre" placeholder="Tu nombre" required>
+      <input type="email" name="email" placeholder="Tu email" required>
+      <textarea name="mensaje" placeholder="Escribe tu mensaje" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <!-- 🔹 FOOTER -->
+  <footer>
+    <p>&copy; 2025 Resort Orlando - Todos los derechos reservados</p>
+  </footer>
+
+</body>
+</html>
