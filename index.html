@@ -4,11 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Resort Orlando</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- 🔹 HEADER -->
+  <!-- HEADER -->
   <header>
     <div class="logo">Resort Orlando</div>
     <nav>
@@ -21,14 +22,20 @@
     </nav>
   </header>
 
-  <!-- 🔹 HERO -->
+  <!-- HERO SLIDER -->
   <section id="inicio" class="hero">
-    <h1>Bienvenido a Resort Orlando</h1>
-    <p>Un lugar único para disfrutar tus vacaciones</p>
-    <a href="#contacto" class="btn">Reservar ahora</a>
+    <div class="slider">
+      <img src="img/hero1.jpg" class="slide active" alt="Resort">
+      <img src="img/hero2.jpg" class="slide" alt="Resort">
+    </div>
+    <div class="hero-text">
+      <h1>Bienvenido a Resort Orlando</h1>
+      <p>Un lugar único para disfrutar tus vacaciones</p>
+      <a href="#contacto" class="btn">Reservar ahora</a>
+    </div>
   </section>
 
-  <!-- 🔹 AMENIDADES -->
+  <!-- AMENIDADES -->
   <section id="amenidades" class="section">
     <h2>Amenidades</h2>
     <div class="cards">
@@ -50,32 +57,27 @@
     </div>
   </section>
 
-  <!-- 🔹 GALERÍA -->
+  <!-- GALERÍA -->
   <section id="galeria" class="section">
     <h2>Galería</h2>
-    <div class="galeria">
-      <img src="img/1.jpg" alt="foto 1">
-      <img src="img/2.jpg" alt="foto 2">
-      <img src="img/3.jpg" alt="foto 3">
-      <img src="img/4.jpg" alt="foto 4">
+    <div class="slider-galeria">
+      <img src="img/1.jpg" class="slide-g" alt="foto 1">
+      <img src="img/2.jpg" class="slide-g" alt="foto 2">
+      <img src="img/3.jpg" class="slide-g" alt="foto 3">
+      <img src="img/4.jpg" class="slide-g" alt="foto 4">
     </div>
   </section>
 
-  <!-- 🔹 CONTACTO -->
-  <section id="contacto" class="section contacto">
-    <h2>Contacto</h2>
-    <form action="https://formspree.io/f/tu-codigo" method="POST">
-      <input type="text" name="nombre" placeholder="Tu nombre" required>
-      <input type="email" name="email" placeholder="Tu email" required>
-      <textarea name="mensaje" placeholder="Escribe tu mensaje" required></textarea>
-      <button type="submit">Enviar</button>
-    </form>
+  <!-- CONTACTO -->
+  <section id="contacto" class="section">
+    <iframe src="contacto.html" style="width:100%; border:none; min-height:450px;"></iframe>
   </section>
 
-  <!-- 🔹 FOOTER -->
+  <!-- FOOTER -->
   <footer>
     <p>&copy; 2025 Resort Orlando - Todos los derechos reservados</p>
   </footer>
 
+  <script src="js/slider.js"></script>
 </body>
 </html>

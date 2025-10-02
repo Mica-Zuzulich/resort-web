@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto - MB Resort</title>
+  <link rel="stylesheet" href="css/contacto.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header class="contacto-header">
+    <div class="overlay"></div>
+    <div class="header-text">
+      <h1>Contacto</h1>
+      <p>
+        Completa el formulario y uno de nuestros asesores se pondrá en contacto contigo en menos de 24 horas para resolver tus dudas, enviarte información detallada de inversión y mostrarte cómo asegurar tu lugar en <strong>MB Resort Orlando</strong>.
+      </p>
+    </div>
+  </header>
+
+  <section class="contacto-formulario">
+    <h2>¡Ponte en contacto con nosotros!</h2>
+    <form class="formulario" action="process/contacto.php" method="POST">      
+      <input type="text" name="nombre" placeholder="Nombre y Apellido" required>
+      <input type="email" name="correo" placeholder="Correo electrónico" required>
+
+      <div class="telefono-group">
+        <select id="countryCode" name="codigo" required>
+          <option value="+1">🇺🇸 +1 (EE.UU.)</option>
+          <option value="+52">🇲🇽 +52 (México)</option>
+          <option value="+54">🇦🇷 +54 (Argentina)</option>
+          <option value="+34">🇪🇸 +34 (España)</option>
+        </select>
+        <input type="tel" id="phone" name="telefono" placeholder="Teléfono" required>
+      </div>
+
+      <select name="tipo" required>
+        <option value="">¿Eres inversionista o asesor?</option>
+        <option value="inversionista">Inversionista</option>
+        <option value="asesor">Asesor</option>
+      </select>
+
+      <textarea name="comentarios" placeholder="Comentarios"></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <footer class="contacto-info">
+    <div class="info-item">
+      <i class="fas fa-map-marker-alt"></i>
+      <p>Orlando, Florida</p>
+    </div>
+    <div class="info-item">
+      <i class="fas fa-phone"></i>
+      <p>+52 (999) 277 1838 6</p>
+    </div>
+    <div class="info-item">
+      <i class="fas fa-envelope"></i>
+      <p>contacto@mbresortorlando.com</p>
+    </div>
+  </footer>
+</body>
+</html>
