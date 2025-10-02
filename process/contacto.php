@@ -1,14 +1,10 @@
 <?php
-
-$destino = "contacto@gmail.com";
+$destino = "contactoangela@gmail.com";
 $asunto  = "Nuevo mensaje desde formulario Web";
 
-
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-
     $nombre     = htmlspecialchars(trim($_POST['nombre'] ?? ''));
     $correo     = filter_var(trim($_POST['correo'] ?? ''), FILTER_SANITIZE_EMAIL);
-    $codigo     = htmlspecialchars(trim($_POST['codigo'] ?? ''));
     $telefono   = htmlspecialchars(trim($_POST['telefono'] ?? ''));
     $tipo       = htmlspecialchars(trim($_POST['tipo'] ?? ''));
     $comentarios= htmlspecialchars(trim($_POST['comentarios'] ?? ''));
@@ -16,6 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if (empty($nombre) || empty($correo) || empty($telefono) || empty($tipo)) {
         die("❌ Por favor, completá todos los campos obligatorios.");
     }
+
     if (!filter_var($correo, FILTER_VALIDATE_EMAIL)) {
         die("❌ El correo ingresado no es válido.");
     }
@@ -23,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $mensaje  = "📩 Nuevo mensaje desde el formulario web\n\n";
     $mensaje .= "Nombre: $nombre\n";
     $mensaje .= "Correo: $correo\n";
-    $mensaje .= "Teléfono: $codigo $telefono\n";
+    $mensaje .= "Teléfono: $telefono\n";
     $mensaje .= "Tipo de contacto: $tipo\n\n";
     $mensaje .= "Comentarios:\n$comentarios\n";
 

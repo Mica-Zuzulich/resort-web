@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="css/contacto.css">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css"/>
 </head>
 <body>
   <header class="contacto-header">
@@ -21,19 +22,11 @@
 
   <section class="contacto-formulario">
     <h2>¡Ponte en contacto con nosotros!</h2>
-    <form class="formulario" action="process/contacto.php" method="POST">      
+    <form class="formulario" id="contactForm" action="process/contacto.php" method="POST">      
       <input type="text" name="nombre" placeholder="Nombre y Apellido" required>
       <input type="email" name="correo" placeholder="Correo electrónico" required>
 
-      <div class="telefono-group">
-        <select id="countryCode" name="codigo" required>
-          <option value="+1">🇺🇸 +1 (EE.UU.)</option>
-          <option value="+52">🇲🇽 +52 (México)</option>
-          <option value="+54">🇦🇷 +54 (Argentina)</option>
-          <option value="+34">🇪🇸 +34 (España)</option>
-        </select>
-        <input type="tel" id="phone" name="telefono" placeholder="Teléfono" required>
-      </div>
+      <input type="tel" id="phone" name="telefono" placeholder="Teléfono" required>
 
       <select name="tipo" required>
         <option value="">¿Eres inversionista o asesor?</option>
@@ -57,8 +50,29 @@
     </div>
     <div class="info-item">
       <i class="fas fa-envelope"></i>
-      <p>contacto@mbresortorlando.com</p>
+      <p>contacto@orlando.com</p>
     </div>
   </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
+  <script>
+    const phoneInput = document.querySelector("#phone");
+    const iti = window.intlTelInput(phoneInput, {
+      initialCountry: "ar",
+      preferredCountries: ["ar", "us", "es", "mx"],
+      utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js"
+    });
+
+    const form = document.getElementById("contactForm");
+    form.addEventListener("submit", function(e) {
+      if (!iti.isValidNumber()) {
+        e.preventDefault();
+        alert("Por favor, ingrese un número de teléfono válido.");
+        return;
+      }
+
+      phoneInput.value = iti.getNumber();
+    });
+  </script>
 </body>
 </html>
