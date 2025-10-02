@@ -5,6 +5,7 @@ body {
   background: #fff;
   line-height: 1.6;
 }
+
 .contacto-header {
   position: relative;
   background: url('../img/contact.png') top/cover no-repeat;
@@ -91,13 +92,13 @@ body {
   outline: none;
 }
 
-.formulario textarea {
+textarea {
   grid-column: 1 / span 2;
   resize: none;
   height: 130px;
 }
 
-.formulario button {
+button {
   grid-column: 1 / span 2;
   background: #0a2640;
   color: #fff;
@@ -111,7 +112,7 @@ body {
   letter-spacing: 1px;
 }
 
-.formulario button:hover {
+button:hover {
   background: #08365a;
   transform: scale(1.05) translateY(-2px);
   box-shadow: 0px 6px 12px rgba(0,0,0,0.2);
@@ -151,4 +152,21 @@ body {
   margin: 0;
   font-size: 15px;
   font-weight: 500;
+}
+
+.error-message {
+  color: #ff4d4f;
+  font-size: 13px;
+  margin-top: 4px;
+  text-align: left;
+}
+
+input.error, select.error, textarea.error {
+  border-color: #ff4d4f;
+  box-shadow: 0 0 5px rgba(255, 77, 79, 0.5);
+}
+
+input.valid, select.valid, textarea.valid {
+  border-color: #28a745;
+  box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
 }
